@@ -1,4 +1,4 @@
 boto3>=1.23.3
 dnspython>=2.2.0
 netaddr>=0.8.0
-sender-policy-flattener @ https://github.com/staffbase/sender_policy_flattener@master
+sender-policy-flattener @ https://github.com/staffbase/sender_policy_flattener@b9f0658573ca906a493d012fe8138e4ebd1c0fed
