@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-ROOTDIR="$(cd "$(dirname "$0")/.." && pwd)"
-uv pip compile "${ROOTDIR}/requirements.txt" --generate-hashes -o "${ROOTDIR}/requirements-lock.txt"
-URL=$(cat "${ROOTDIR}/requirements.txt" | grep -oP "(?<=sender-policy-flattener @ ).+\$")
-HASH=$(curl -sL "${URL}" | shasum -a 256 | cut -d' ' -f1)
-echo -e "sender-policy-flattener @ ${URL} \\\\\n    --hash=sha256:${HASH}" >> "${ROOTDIR}/requirements-lock.txt"
